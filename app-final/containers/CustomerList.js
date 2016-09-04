@@ -62,9 +62,7 @@ ListOfCustomers.propTypes = {
 function NoCustomers() {
   return (
     <div>
-      <div className="wrapper-that-needs-to-happen-for-some-reason">
-        You have absolutely no customers. Better get to work!
-      </div>
+      You have no customers. Better get to work!
     </div>
   )
 }

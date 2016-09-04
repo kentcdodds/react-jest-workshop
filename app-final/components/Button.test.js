@@ -16,7 +16,7 @@ function getContextProvider(children, context) {
       return context
     }
     render() {
-      return <div>{children}</div>
+      return children
     }
   }
   ContextProvider.childContextTypes = Object.keys(context).reduce((obj, key) => {
