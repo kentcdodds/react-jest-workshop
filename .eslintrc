@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "kentcdodds/best-practices",
+    "kentcdodds/possible-errors",
+    "kentcdodds/es6/best-practices",
+    "kentcdodds/es6/possible-errors",
+    "kentcdodds/import/best-practices",
+    "kentcdodds/import/possible-errors",
+    "kentcdodds/mocha",
+    "kentcdodds/react",
+  ],
+  "rules": {
+    "no-invalid-this": 0,
+    "mocha/no-hooks": 0,
+  }
+}

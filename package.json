@@ -1,0 +1,58 @@
+{
+  "name": "react-jest-workshop",
+  "private": true,
+  "version": "1.0.0",
+  "description": "🐯 A workshop repository for testing React ⚛ with Jest 🃏",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "jest --coverage app/",
+    "test:final": "jest --coverage app-final/",
+    "watch:test": "npm run test -- --watch",
+    "validate": "npm run lint && npm run test:final",
+    "setup": "npm install && npm run validate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kentcdodds/react-jest-workshop.git"
+  },
+  "keywords": [],
+  "author": "Kent C. Dodds <kent@doddsfamily.us> (http://kentcdodds.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kentcdodds/react-jest-workshop/issues"
+  },
+  "homepage": "https://github.com/kentcdodds/react-jest-workshop#readme",
+  "dependencies": {
+    "react": "15.3.1",
+    "react-dom": "15.3.1"
+  },
+  "devDependencies": {
+    "babel-jest": "15.0.0",
+    "babel-polyfill": "6.13.0",
+    "babel-preset-es2015": "6.14.0",
+    "babel-preset-react": "6.11.1",
+    "babel-preset-stage-2": "6.13.0",
+    "chai": "3.5.0",
+    "chai-enzyme": "0.5.1",
+    "enzyme": "2.4.1",
+    "eslint": "3.4.0",
+    "eslint-config-kentcdodds": "10.1.0",
+    "jest": "15.1.1",
+    "react-test-renderer": "15.3.1",
+    "sinon": "1.17.5",
+    "sinon-chai": "2.8.0"
+  },
+  "jest": {
+    "cacheDirectory": "./node_modules/.cache",
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "setupFiles": []
+  }
+}
