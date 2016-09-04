@@ -1,4 +1,4 @@
-exports[`test should have toggle--off class applied by default 1`] = `
+exports[`test has toggle--off class applied by default 1`] = `
 <div
   className="toggle toggle--off">
   <button
@@ -8,7 +8,7 @@ exports[`test should have toggle--off class applied by default 1`] = `
 </div>
 `;
 
-exports[`test should have toggle--on class applied when initialToggledOn specified to true 1`] = `
+exports[`test has toggle--on class applied when initialToggledOn specified to true 1`] = `
 <div
   className="toggle toggle--on">
   <button

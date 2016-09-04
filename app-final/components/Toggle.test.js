@@ -3,11 +3,11 @@ import renderer from 'react-test-renderer'
 
 import Toggle from './Toggle'
 
-test('should have toggle--off class applied by default', () => {
+test('has toggle--off class applied by default', () => {
   snapshotProps()
 })
 
-test('should have toggle--on class applied when initialToggledOn specified to true', () => {
+test('has toggle--on class applied when initialToggledOn specified to true', () => {
   snapshotProps({initialToggledOn: true})
 })
 

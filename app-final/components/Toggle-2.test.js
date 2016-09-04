@@ -5,7 +5,7 @@ import {spy} from 'sinon'
 import Toggle from './Toggle'
 
 
-test('should invoke the onToggle prop when clicked', () => {
+test('invokes the onToggle prop when clicked', () => {
   const onToggle = spy()
   const wrapper = mountToggle({onToggle})
   clickButton(wrapper)
@@ -14,7 +14,7 @@ test('should invoke the onToggle prop when clicked', () => {
   expect(onToggle.calledWith(true))
 })
 
-test('should change the class when clicked', () => {
+test('changes the class when clicked', () => {
   const wrapper = mountToggle()
   clickButton(wrapper)
   expect(wrapper.html()).toContain('toggle--on')
