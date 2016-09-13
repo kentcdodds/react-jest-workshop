@@ -36,10 +36,10 @@
     "chai": "3.5.0",
     "chai-enzyme": "0.5.1",
     "enzyme": "2.4.1",
-    "eslint": "3.4.0",
+    "eslint": "3.5.0",
     "eslint-config-kentcdodds": "10.1.0",
     "jest": "15.1.1",
-    "react-test-context-provider": "2.0.0",
+    "react-test-context-provider": "2.1.2",
     "react-test-renderer": "15.3.1",
     "sinon": "1.17.5",
     "sinon-chai": "2.8.0"
