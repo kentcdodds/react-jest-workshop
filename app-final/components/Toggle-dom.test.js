@@ -1,23 +1,19 @@
 import React from 'react'
 import {mount} from 'enzyme'
-import {spy} from 'sinon'
-
 import Toggle from './Toggle'
 
-
 test('invokes the onToggle prop when clicked', () => {
-  const onToggle = spy()
+  const onToggle = jest.fn()
   const wrapper = mountToggle({onToggle})
   clickButton(wrapper)
-
-  expect(onToggle.calledOnce)
-  expect(onToggle.calledWith(true))
+  expect(onToggle.mock.calls.length).toBe(1)
+  expect(onToggle).toBeCalledWith(true)
 })
 
-test('changes the class when clicked', () => {
+test('changes the class to toggle--on when clicked', () => {
   const wrapper = mountToggle()
   clickButton(wrapper)
-  expect(wrapper.html()).toContain('toggle--on')
+  expect(wrapper.html()).toMatchSnapshot()
 })
 
 function mountToggle(props) {

@@ -1,4 +1,3 @@
-// import {spy} from 'sinon'
 // import store from './Customers'
 
 describe('Customers', () => {

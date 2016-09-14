@@ -1,4 +1,3 @@
-import {spy} from 'sinon'
 export default getStoreStub
 
 /**
@@ -9,7 +8,7 @@ export default getStoreStub
  */
 function getStoreStub(customers = []) {
   let callback
-  const unsubscribe = spy()
+  const unsubscribe = jest.fn()
   const ref = {customers}
 
   const store = {

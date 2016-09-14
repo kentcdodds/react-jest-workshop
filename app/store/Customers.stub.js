@@ -1,4 +1,3 @@
-// import {spy} from 'sinon'
 export default getStoreStub
 
 function getStoreStub() {

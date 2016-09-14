@@ -6,7 +6,7 @@
     "kentcdodds/es6/possible-errors",
     "kentcdodds/import/best-practices",
     "kentcdodds/import/possible-errors",
-    "kentcdodds/mocha",
+    "kentcdodds/jest",
     "kentcdodds/react",
   ],
   "rules": {

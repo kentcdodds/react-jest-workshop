@@ -7,7 +7,7 @@
 Find slides [here](http://kcd.im/testing-react)
 
 This is a workshop for learning how to test [React][React] with the [Jest][Jest] testing framework and the
-[Enzyme][Enzyme] testing library. It also uses [Chai][Chai] for more helpful assertions
+[Enzyme][Enzyme] testing library.
 
 ## Project Setup
 
@@ -53,7 +53,6 @@ MIT
 [React]: https://facebook.github.io/react/
 [Jest]: http://facebook.github.io/jest/
 [Enzyme]: http://airbnb.io/enzyme/
-[Chai]: http://chaijs.com/
 [slides]: http://kcd.im/testing-react
 [slides-badge]: https://cdn.rawgit.com/kentcdodds/custom-badges/2/badges/slides.svg
 [donate]: http://kcd.im/donate

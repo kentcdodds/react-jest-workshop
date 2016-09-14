@@ -1,6 +1,5 @@
 // import React from 'react'
 // import {render, mount} from 'enzyme'
-// import {spy} from 'sinon'
 
 // import Toggle from './Toggle'
 

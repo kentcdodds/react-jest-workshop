@@ -13,8 +13,7 @@ test('has toggle--on class applied when initialToggledOn specified to true', () 
 
 function snapshotProps(props) {
   const component = renderToggle(props)
-  const tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
+  expect(component).toMatchSnapshot()
 }
 
 /**

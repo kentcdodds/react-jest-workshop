@@ -6,25 +6,21 @@ import CustomerList from './CustomerList'
 
 test('should render no customers', () => {
   const component = renderCustomerList()
-  const tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
+  expect(component).toMatchSnapshot()
 })
 
 test('should render customers', () => {
   const {store} = getStoreStub([{name: 'Bob'}, {name: 'Joanna'}])
   const component = renderCustomerList({store})
-  const tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
+  expect(component).toMatchSnapshot()
 })
 
 test('should respond to store updates', () => {
   const {store, updateCustomers} = getStoreStub()
   const component = renderCustomerList({store})
-  let tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
+  expect(component).toMatchSnapshot()
   updateCustomers([{name: 'Jill'}, {name: 'Fred'}])
-  tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
+  expect(component).toMatchSnapshot()
 })
 
 /**
