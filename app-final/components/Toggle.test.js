@@ -4,6 +4,7 @@ import renderer from 'react-test-renderer'
 import Toggle from './Toggle'
 
 test('has toggle--off class applied by default', () => {
+  throw new Error('this error is on line 7 of Toggle.test.js which is transpiled for tests!')
   snapshotProps()
 })
 
