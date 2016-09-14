@@ -6,7 +6,7 @@ test('invokes the onToggle prop when clicked', () => {
   const onToggle = jest.fn()
   const wrapper = mountToggle({onToggle})
   clickButton(wrapper)
-  expect(onToggle.mock.calls.length).toBe(1)
+  expect(onToggle).toHaveBeenCalledTimes(1)
   expect(onToggle).toBeCalledWith(true)
 })
 

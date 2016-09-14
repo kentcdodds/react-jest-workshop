@@ -22,7 +22,7 @@ test('should allow you to subscribe to the store', () => {
   const subscriber = jest.fn()
   const unsubscribe = store.subscribe(subscriber)
   store.setCustomers([])
-  expect(subscriber.mock.calls.length).toBe(1)
+  expect(subscriber).toHaveBeenCalledTimes(1)
   subscriber.mockClear()
   unsubscribe()
   store.setCustomers([])

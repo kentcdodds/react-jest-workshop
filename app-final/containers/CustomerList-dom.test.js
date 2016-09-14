@@ -7,5 +7,5 @@ test('unsubscribe when unmounted', () => {
   const {unsubscribe, store} = getStoreStub()
   const wrapper = mount(<CustomerList store={store} />)
   wrapper.unmount()
-  expect(unsubscribe.mock.calls.length).toBe(1)
+  expect(unsubscribe).toHaveBeenCalledTimes(1)
 })
