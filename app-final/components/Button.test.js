@@ -1,10 +1,10 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import getElementWithContext from 'react-test-context-provider'
+import stubContext from 'react-stub-context'
 import Button from './Button'
 
 test('styles the button with a background of the context color', () => {
-  const reactElement = getElementWithContext({color: 'blue'}, <Button>Click Me</Button>)
-  const component = renderer.create(reactElement)
+  const ButtonWithContext = stubContext(Button, {color: 'blue'})
+  const component = renderer.create(<ButtonWithContext>Click Me</ButtonWithContext>)
   expect(component).toMatchSnapshot()
 })
