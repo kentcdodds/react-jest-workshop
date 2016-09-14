@@ -11,6 +11,6 @@
   ],
   "rules": {
     "no-invalid-this": 0,
-    "mocha/no-hooks": 0,
+    "global-require": 0,
   }
 }
