@@ -6,10 +6,11 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "jest --coverage app/",
-    "test:final": "jest --coverage app-final/",
+    "test": "jest --coverage exercises/",
+    "test:final": "jest --coverage exercises-final/",
     "watch:test": "npm run test -- --watch",
-    "validate": "npm run lint && npm run test:final",
+    "generate": "split-guide generate",
+    "validate": "npm run generate && npm run lint && npm run test:final",
     "setup": "npm install && npm run validate"
   },
   "repository": {
@@ -36,16 +37,20 @@
     "enzyme": "2.4.1",
     "eslint": "3.5.0",
     "eslint-config-kentcdodds": "10.1.0",
+    "glob": "7.0.6",
     "jest": "15.1.1",
+    "mkdirp": "0.5.1",
     "react-stub-context": "0.7.0",
-    "react-test-renderer": "15.3.1"
+    "react-test-renderer": "15.3.1",
+    "rimraf": "2.5.4",
+    "split-guide": "1.0.0"
   },
   "jest": {
     "cacheDirectory": "./node_modules/.cache",
     "coverageThreshold": {
       "global": {
         "branches": 100,
-        "functions": 100,
+        "functions": 95,
         "lines": 100,
         "statements": 100
       }

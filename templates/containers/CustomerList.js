@@ -1,8 +1,6 @@
-/**
- * KENT: DON'T FORGET TO UPDATE THIS TO NOT
- * USE PROPS.STORE EVERYWHERE BEFORE YOUR
- * MIDWESTJS TALK :)
- */
+// COMMENT_START
+/* eslint no-dupe-keys:0, no-redeclare:0 */
+// COMMENT_END
 import React, {PropTypes, Component} from 'react'
 import store from '../store/Customers'
 
@@ -10,18 +8,33 @@ class CustomerList extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      // FINAL_START the key is getting the store from props
       customers: props.store.getCustomers(),
+      // FINAL_END
+      // WORKSHOP_START normally you'll just use the singleton store
+      customers: store.getCustomers(),
+      // WORKSHOP_END
     }
   }
   componentDidMount() {
+    // FINAL_START
     this.unsubscribe = this.props.store.subscribe(this.updateStateWithCustomers)
+    // FINAL_END
+    // WORKSHOP_START
+    this.unsubscribe = store.subscribe(this.updateStateWithCustomers)
+    // WORKSHOP_END
   }
   componentWillUnmount() {
     this.unsubscribe()
   }
 
   updateStateWithCustomers = () => {
+    // FINAL_START
     const customers = this.props.store.getCustomers()
+    // FINAL_END
+    // WORKSHOP_START
+    const customers = store.getCustomers()
+    // WORKSHOP_END
     this.setState({customers})
   };
 
@@ -35,6 +48,7 @@ class CustomerList extends Component {
   }
 }
 
+// FINAL_START
 CustomerList.defaultProps = {store}
 
 CustomerList.propTypes = {
@@ -44,6 +58,7 @@ CustomerList.propTypes = {
   }),
 }
 
+// FINAL_END
 function ListOfCustomers({customers}) {
   return (
     <div>

@@ -7,4 +7,3 @@ components when they're updated from an external source of data (like a store).
 I don't recommend you write your stores this way.
 
 This store is tested, but there's not really much going on in here...
-

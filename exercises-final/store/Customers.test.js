@@ -29,10 +29,8 @@ test('should allow you to subscribe to the store', () => {
 })
 
 /**
- * Prepares our environment for an individual test and returns
- * whatever is needed for that test to run.
- * @return {Object} what is needed for tests to run. In this case
- * it is only a fresh copy of the store
+ * Prepares our environment for an individual test and returns whatever is needed for that test to run.
+ * @return {Object} what is needed for tests to run. In this case it is only a fresh copy of the store
  */
 function setup() {
   // clear the require cache so when we require the store we get a fresh copy

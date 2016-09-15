@@ -16,18 +16,21 @@ test('changes the class to toggle--on when clicked', () => {
   expect(wrapper.html()).toMatchSnapshot()
 })
 
-function mountToggle(props) {
-  return mount(<Toggle {...getProps(props)} />)
+/**
+ * Uses enzyme to mount the Toggle component
+ * @param {Object} props - the props to mount the component with
+ * @return {Object} - the enzyme wrapper
+ */
+function mountToggle(props = {}) {
+  return mount(
+    <Toggle onToggle={() => {}} {...props}>Toggle Me</Toggle>
+  )
 }
 
-function getProps(props = {}) {
-  return {
-    onToggle() {},
-    children: 'Toggle Me',
-    ...props,
-  }
-}
-
+/**
+ * finds the button in the given wrapper and simulates a click event
+ * @param {Object} wrapper - the enzyme wrapper
+ */
 function clickButton(wrapper) {
   wrapper.find('button').first().simulate('click')
 }

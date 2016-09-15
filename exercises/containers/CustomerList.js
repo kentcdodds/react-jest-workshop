@@ -1,8 +1,3 @@
-/**
- * KENT: DON'T FORGET TO UPDATE THIS TO NOT
- * USE PROPS.STORE EVERYWHERE BEFORE YOUR
- * MIDWESTJS TALK :)
- */
 import React, {PropTypes, Component} from 'react'
 import store from '../store/Customers'
 
@@ -10,18 +5,18 @@ class CustomerList extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      customers: props.store.getCustomers(),
+      customers: store.getCustomers(),
     }
   }
   componentDidMount() {
-    this.unsubscribe = this.props.store.subscribe(this.updateStateWithCustomers)
+    this.unsubscribe = store.subscribe(this.updateStateWithCustomers)
   }
   componentWillUnmount() {
     this.unsubscribe()
   }
 
   updateStateWithCustomers = () => {
-    const customers = this.props.store.getCustomers()
+    const customers = store.getCustomers()
     this.setState({customers})
   };
 
@@ -33,15 +28,6 @@ class CustomerList extends Component {
       return <ListOfCustomers customers={customers} />
     }
   }
-}
-
-CustomerList.defaultProps = {store}
-
-CustomerList.propTypes = {
-  store: PropTypes.shape({
-    getCustomers: PropTypes.func,
-    subscribe: PropTypes.func,
-  }),
 }
 
 function ListOfCustomers({customers}) {
