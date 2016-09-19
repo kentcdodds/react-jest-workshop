@@ -1,5 +1,6 @@
 import React from 'react'
 import {mount} from 'enzyme'
+import {mountToJson} from 'enzyme-to-json'
 import Toggle from './Toggle'
 
 test('invokes the onToggle prop when clicked', () => {
@@ -13,7 +14,7 @@ test('invokes the onToggle prop when clicked', () => {
 test('changes the class to toggle--on when clicked', () => {
   const wrapper = mountToggle()
   clickButton(wrapper)
-  expect(wrapper.html()).toMatchSnapshot()
+  expect(mountToJson(wrapper)).toMatchSnapshot()
 })
 
 /**

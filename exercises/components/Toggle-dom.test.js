@@ -1,4 +1,5 @@
-// you'll need to import react, enzyme's mount function, and ./Toggle
+// you'll need to import react, enzyme's mount function,
+// enzyme-to-json's mountToJson function, and ./Toggle
 
 test('invokes the onToggle prop when clicked', () => {
   // create a mock function of onToggle with jest.fn()
@@ -11,7 +12,7 @@ test('invokes the onToggle prop when clicked', () => {
 test('changes the class to toggle--on when clicked', () => {
   // mountToggle with no specified props (just use defaults from your mountToggle function)
   // click the button
-  // take a snapshot of the wrapper.html() and verify it looks good
+  // take a snapshot of the wrapper with mountToJson from enzyme-to-json and verify it looks good
 })
 
 // create a mountToggle function that accepts some props and applies those to a mount of the <Toggle /> component

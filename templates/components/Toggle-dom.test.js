@@ -1,10 +1,12 @@
 // FINAL_START
 import React from 'react'
 import {mount} from 'enzyme'
+import {mountToJson} from 'enzyme-to-json'
 import Toggle from './Toggle'
 // FINAL_END
 // WORKSHOP_START
-// you'll need to import react, enzyme's mount function, and ./Toggle
+// you'll need to import react, enzyme's mount function,
+// enzyme-to-json's mountToJson function, and ./Toggle
 // WORKSHOP_END
 
 test('invokes the onToggle prop when clicked', () => {
@@ -28,12 +30,12 @@ test('changes the class to toggle--on when clicked', () => {
   // FINAL_START
   const wrapper = mountToggle()
   clickButton(wrapper)
-  expect(wrapper.html()).toMatchSnapshot()
+  expect(mountToJson(wrapper)).toMatchSnapshot()
   // FINAL_END
   // WORKSHOP_START
   // mountToggle with no specified props (just use defaults from your mountToggle function)
   // click the button
-  // take a snapshot of the wrapper.html() and verify it looks good
+  // take a snapshot of the wrapper with mountToJson from enzyme-to-json and verify it looks good
   // WORKSHOP_END
 })
 

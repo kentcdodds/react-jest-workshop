@@ -1,1 +1,7 @@
-exports[`test changes the class to toggle--on when clicked 1`] = `"<div class=\"toggle toggle--on\"><button>Toggle Me</button></div>"`;
+exports[`test changes the class to toggle--on when clicked 1`] = `
+<Toggle
+  onToggle={[Function onToggle]}>
+  <button
+    onClick={[Function anonymous]} />
+</Toggle>
+`;

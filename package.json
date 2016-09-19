@@ -35,6 +35,7 @@
     "babel-preset-react": "6.11.1",
     "babel-preset-stage-2": "6.13.0",
     "enzyme": "2.4.1",
+    "enzyme-to-json": "1.0.3",
     "eslint": "3.5.0",
     "eslint-config-kentcdodds": "10.1.0",
     "glob": "7.0.6",
