@@ -1,13 +1,34 @@
 // FINAL_START
 import React from 'react'
-import {mount} from 'enzyme'
-import {mountToJson} from 'enzyme-to-json'
+import {render, mount} from 'enzyme'
 import Toggle from './Toggle'
 // FINAL_END
 // WORKSHOP_START
-// you'll need to import react, enzyme's mount function,
-// enzyme-to-json's mountToJson function, and ./Toggle
+// you'll need to import react, enzyme's render and mount functions,
+// and ./Toggle
 // WORKSHOP_END
+
+test('has toggle--off class applied by default', () => {
+  // FINAL_START
+  const wrapper = renderToggle()
+  expect(rootHasClass(wrapper, 'toggle--off')).toBe(true)
+  // FINAL_END
+  // WORKSHOP_START
+  // create a renderToggle function and call that without arguments to get a wrapper with the defaults
+  // expect the first child to have the class toggle--off (tip: create rootHasClass(wrapper, className) function)
+  // WORKSHOP_END
+})
+
+test('has toggle--on class applied when initialToggledOn specified to true', () => {
+  // FINAL_START
+  const wrapper = renderToggle({initialToggledOn: true})
+  expect(rootHasClass(wrapper, 'toggle--on')).toBe(true)
+  // FINAL_END
+  // WORKSHOP_START
+  // use the renderToggle function and call it with {initialToggledOn: true}
+  // expect the first child to have the class toggle--on
+  // WORKSHOP_END
+})
 
 test('invokes the onToggle prop when clicked', () => {
   // FINAL_START
@@ -30,7 +51,7 @@ test('changes the class to toggle--on when clicked', () => {
   // FINAL_START
   const wrapper = mountToggle()
   clickButton(wrapper)
-  expect(mountToJson(wrapper)).toMatchSnapshot()
+  expect(rootHasClass(wrapper, 'toggle--on'))
   // FINAL_END
   // WORKSHOP_START
   // mountToggle with no specified props (just use defaults from your mountToggle function)
@@ -47,7 +68,26 @@ test('changes the class to toggle--on when clicked', () => {
  */
 function mountToggle(props = {}) {
   return mount(
-    <Toggle onToggle={() => {}} {...props}>Toggle Me</Toggle>
+    <Toggle
+      onToggle={() => {}}
+      children="Toggle Me"
+      {...props}
+    />
+  )
+}
+
+/**
+ * Uses enzyme to render the Toggle component
+ * @param {Object} props - the props to render the component with
+ * @return {Object} - the enzyme wrapper
+ */
+function renderToggle(props = {}) {
+  return render(
+    <Toggle
+      onToggle={() => {}}
+      children="Toggle Me"
+      {...props}
+    />
   )
 }
 
@@ -58,9 +98,20 @@ function mountToggle(props = {}) {
 function clickButton(wrapper) {
   wrapper.find('button').first().simulate('click')
 }
+
+/**
+ * Returns whether the root of the given wrapper has the given className
+ * @param {Object} wrapper - the wrapper to get the root element from
+ * @param {String} className - the class to check for
+ * @return {Boolean} whether the root element has the given class
+ */
+function rootHasClass(wrapper, className) {
+  return wrapper.children().first().hasClass(className)
+}
 // FINAL_END
 // WORKSHOP_START
-// create a mountToggle function that accepts some props and applies those to a mount of the <Toggle /> component
+// create a renderToggle function that accepts some props and applies those to a render of the <Toggle /> component
 //   you should also provide defaults for any required props
+// create a mountToggle function that does basically the same thing except with mount
 // Also a clickButton(wrapper) function would be handy to create here as well as both tests will need to do that.
 // WORKSHOP_END

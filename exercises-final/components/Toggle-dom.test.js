@@ -1,7 +1,16 @@
 import React from 'react'
-import {mount} from 'enzyme'
-import {mountToJson} from 'enzyme-to-json'
+import {render, mount} from 'enzyme'
 import Toggle from './Toggle'
+
+test('has toggle--off class applied by default', () => {
+  const wrapper = renderToggle()
+  expect(rootHasClass(wrapper, 'toggle--off')).toBe(true)
+})
+
+test('has toggle--on class applied when initialToggledOn specified to true', () => {
+  const wrapper = renderToggle({initialToggledOn: true})
+  expect(rootHasClass(wrapper, 'toggle--on')).toBe(true)
+})
 
 test('invokes the onToggle prop when clicked', () => {
   const onToggle = jest.fn()
@@ -14,7 +23,7 @@ test('invokes the onToggle prop when clicked', () => {
 test('changes the class to toggle--on when clicked', () => {
   const wrapper = mountToggle()
   clickButton(wrapper)
-  expect(mountToJson(wrapper)).toMatchSnapshot()
+  expect(rootHasClass(wrapper, 'toggle--on'))
 })
 
 /**
@@ -24,7 +33,26 @@ test('changes the class to toggle--on when clicked', () => {
  */
 function mountToggle(props = {}) {
   return mount(
-    <Toggle onToggle={() => {}} {...props}>Toggle Me</Toggle>
+    <Toggle
+      onToggle={() => {}}
+      children="Toggle Me"
+      {...props}
+    />
+  )
+}
+
+/**
+ * Uses enzyme to render the Toggle component
+ * @param {Object} props - the props to render the component with
+ * @return {Object} - the enzyme wrapper
+ */
+function renderToggle(props = {}) {
+  return render(
+    <Toggle
+      onToggle={() => {}}
+      children="Toggle Me"
+      {...props}
+    />
   )
 }
 
@@ -34,4 +62,14 @@ function mountToggle(props = {}) {
  */
 function clickButton(wrapper) {
   wrapper.find('button').first().simulate('click')
+}
+
+/**
+ * Returns whether the root of the given wrapper has the given className
+ * @param {Object} wrapper - the wrapper to get the root element from
+ * @param {String} className - the class to check for
+ * @return {Boolean} whether the root element has the given class
+ */
+function rootHasClass(wrapper, className) {
+  return wrapper.children().first().hasClass(className)
 }
