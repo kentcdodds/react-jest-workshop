@@ -1,39 +1,48 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import {render, mount} from 'enzyme'
+import {renderToJson, mountToJson} from 'enzyme-to-json'
 import getStoreStub from '../store/Customers.stub'
 import CustomerList from './CustomerList'
 
 test('should render no customers', () => {
-  snapshotCustomerList()
+  snapshotRenderedCustomerList()
 })
 
 test('should render customers', () => {
   const {store} = getStoreStub([{name: 'Bob'}, {name: 'Joanna'}])
-  snapshotCustomerList({store})
+  snapshotRenderedCustomerList({store})
 })
 
 test('should respond to store updates', () => {
   const {store, updateCustomers} = getStoreStub()
-  const component = renderCustomerList({store})
-  expect(component).toMatchSnapshot()
+  const wrapper = mountCustomerList({store})
   updateCustomers([{name: 'Jill'}, {name: 'Fred'}])
-  expect(component).toMatchSnapshot()
+  expect(mountToJson(wrapper)).toMatchSnapshot()
 })
 
 /**
  * Render the <CustomerList /> and snapshot it
  * @param {Object} props - the props to render with
  */
-function snapshotCustomerList(props = {}) {
-  const component = renderCustomerList(props)
-  expect(component).toMatchSnapshot()
+function snapshotRenderedCustomerList(props) {
+  const wrapper = renderCustomerList(props)
+  expect(renderToJson(wrapper)).toMatchSnapshot()
 }
 
 /**
  * Renders <CustomerList /> with the given props
  * @param {Object} props - the props to render with
- * @return {Object} the rendered component
+ * @return {Object} the rendered wrapper
  */
-function renderCustomerList({store = getStoreStub().store}) {
-  return renderer.create(<CustomerList store={store} />)
+function renderCustomerList({store = getStoreStub().store} = {}) {
+  return render(<CustomerList store={store} />)
+}
+
+/**
+ * Mounts <CustomerList /> with the given props
+ * @param {Object} props - the props to mount with
+ * @return {Object} the mounted wrapper
+ */
+function mountCustomerList({store = getStoreStub().store} = {}) {
+  return mount(<CustomerList store={store} />)
 }

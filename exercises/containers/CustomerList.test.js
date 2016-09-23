@@ -3,7 +3,7 @@
 // and the ./CustomerList component (which we're testing)
 
 test('should render no customers', () => {
-  // create a snapshotCustomerList function and test the default
+  // create a snapshotRenderedCustomerList function and test the default
   //   behavior by calling it without arguments
   // Then use the resulting component to check the snapshot
 })
@@ -15,7 +15,7 @@ test('should render customers', () => {
   //   to specify a store! So go to the CustomerList.js file and add a prop called `store`. Wherever the singleton
   //   `store` is used, use `this.props.store` instead and use defaultProps to have the `store` default to the singleton
   //   `store` (that way actual users of the component don't have to specify the store).
-  // Now use the snapshotCustomerList function you wrote to pass the store as a prop
+  // Now use the snapshotRenderedCustomerList function you wrote to pass the store as a prop
 })
 
 test('should respond to store updates', () => {
@@ -26,7 +26,7 @@ test('should respond to store updates', () => {
   // take another snapshot
 })
 
-// Create a snapshotCustomerList function that:
+// Create a snapshotRenderedCustomerList function that:
 // 1. Accepts props
 // 2. Creates a component with those props with a call to renderer.create (tip: you may wanna do this in a separate function)
 // 3. Asserts on a snapshot of that component with expect(component).toMatchSnapshot()

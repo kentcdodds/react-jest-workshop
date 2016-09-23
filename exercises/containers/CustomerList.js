@@ -33,7 +33,9 @@ class CustomerList extends Component {
 function ListOfCustomers({customers}) {
   return (
     <div>
-      Here is your list of customers!
+      <div>
+        Here is your list of customers!
+      </div>
       <ul>
         {customers.map((c, i) => <li key={i}>{c.name}</li>)}
       </ul>

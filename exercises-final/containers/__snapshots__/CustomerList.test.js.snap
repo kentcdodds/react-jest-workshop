@@ -1,6 +1,8 @@
 exports[`test should render customers 1`] = `
 <div>
-  Here is your list of customers!
+  <div>
+    Here is your list of customers!
+  </div>
   <ul>
     <li>
       Bob
@@ -19,21 +21,51 @@ exports[`test should render no customers 1`] = `
 `;
 
 exports[`test should respond to store updates 1`] = `
-<div>
-  You have no customers. Better get to work!
-</div>
-`;
-
-exports[`test should respond to store updates 2`] = `
-<div>
-  Here is your list of customers!
-  <ul>
-    <li>
-      Jill
-    </li>
-    <li>
-      Fred
-    </li>
-  </ul>
-</div>
+<CustomerList
+  store={
+    Object {
+      "getCustomers": [Function getCustomers],
+      "subscribe": [Function subscribe]
+    }
+  }>
+  <function ListOfCustomers( /* istanbul ignore next */_ref2) {/* istanbul ignore next */var customers = _ref2.customers; /* istanbul ignore next */++__cov_lvVWst_SZwengrEOh37UL$X$OXw.f['6'];++__cov_lvVWst_SZwengrEOh37UL$X$OXw.f['6'];++__cov_lvVWst_SZwengrEOh37UL$X$OXw.s['13'];++__cov_lvVWst_SZwengrEOh37UL$X$OXw.s['11'];
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null,
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null, /* istanbul ignore next */'Here is your list of customers!'),
+  
+  
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'ul', /* istanbul ignore next */null,
+          customers.map(function (c, i) {/* istanbul ignore next */++__cov_lvVWst_SZwengrEOh37UL$X$OXw.f['7'];++__cov_lvVWst_SZwengrEOh37UL$X$OXw.f['7'];++__cov_lvVWst_SZwengrEOh37UL$X$OXw.s['14'];++__cov_lvVWst_SZwengrEOh37UL$X$OXw.s['12'];return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'li', /* istanbul ignore next */{ key: i }, c.name));}))));
+  
+  
+  
+  }
+    customers={
+      Array [
+        Object {
+          "name": "Jill"
+        },
+        Object {
+          "name": "Fred"
+        }
+      ]
+    }>
+    <div />
+    <ul>
+      <li />
+      <li />
+    </ul>
+  </function ListOfCustomers( /* istanbul ignore next */_ref2) {/* istanbul ignore next */var customers = _ref2.customers; /* istanbul ignore next */++__cov_lvVWst_SZwengrEOh37UL$X$OXw.f['6'];++__cov_lvVWst_SZwengrEOh37UL$X$OXw.f['6'];++__cov_lvVWst_SZwengrEOh37UL$X$OXw.s['13'];++__cov_lvVWst_SZwengrEOh37UL$X$OXw.s['11'];
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null,
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null, /* istanbul ignore next */'Here is your list of customers!'),
+  
+  
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'ul', /* istanbul ignore next */null,
+          customers.map(function (c, i) {/* istanbul ignore next */++__cov_lvVWst_SZwengrEOh37UL$X$OXw.f['7'];++__cov_lvVWst_SZwengrEOh37UL$X$OXw.f['7'];++__cov_lvVWst_SZwengrEOh37UL$X$OXw.s['14'];++__cov_lvVWst_SZwengrEOh37UL$X$OXw.s['12'];return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'li', /* istanbul ignore next */{ key: i }, c.name));}))));
+  
+  
+  
+  }>
+</CustomerList>
 `;
