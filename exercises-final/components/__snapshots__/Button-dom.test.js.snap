@@ -1,0 +1,10 @@
+exports[`test styles the button with a background of the context color 1`] = `
+<Button>
+  <button
+    style={
+      Object {
+        "background": "blue"
+      }
+    } />
+</Button>
+`;
