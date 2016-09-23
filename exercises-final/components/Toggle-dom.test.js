@@ -20,11 +20,6 @@ test('invokes the onToggle prop when clicked', () => {
   expect(onToggle).toBeCalledWith(true)
 })
 
-test('changes the class to toggle--on when clicked', () => {
-  const wrapper = mountToggle()
-  clickButton(wrapper)
-  expect(rootHasClass(wrapper, 'toggle--on'))
-})
 
 /**
  * Uses enzyme to mount the Toggle component

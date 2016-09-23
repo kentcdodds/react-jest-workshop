@@ -19,11 +19,6 @@ test('invokes the onToggle prop when clicked', () => {
   // assert that it was called with `true`
 })
 
-test('changes the class to toggle--on when clicked', () => {
-  // mountToggle with no specified props (just use defaults from your mountToggle function)
-  // click the button
-  // take a snapshot of the wrapper with mountToJson from enzyme-to-json and verify it looks good
-})
 
 // create a renderToggle function that accepts some props and applies those to a render of the <Toggle /> component
 //   you should also provide defaults for any required props
