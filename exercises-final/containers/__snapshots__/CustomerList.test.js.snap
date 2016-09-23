@@ -28,14 +28,14 @@ exports[`test should respond to store updates 1`] = `
       "subscribe": [Function subscribe]
     }
   }>
-  <function ListOfCustomers( /* istanbul ignore next */_ref2) {/* istanbul ignore next */var customers = _ref2.customers; /* istanbul ignore next */++__cov_lvVWst_SZwengrEOh37UL$X$OXw.f['6'];++__cov_lvVWst_SZwengrEOh37UL$X$OXw.s['13'];
+  <function ListOfCustomers( /* istanbul ignore next */_ref) {/* istanbul ignore next */var customers = _ref.customers;
     return (
       /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null,
         /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null, /* istanbul ignore next */'Here is your list of customers!'),
   
   
         /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'ul', /* istanbul ignore next */null,
-          customers.map(function (c, i) {/* istanbul ignore next */++__cov_lvVWst_SZwengrEOh37UL$X$OXw.f['7'];++__cov_lvVWst_SZwengrEOh37UL$X$OXw.s['14'];return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'li', /* istanbul ignore next */{ key: i }, c.name));}))));
+          customers.map(function (c, i) /* istanbul ignore next */{return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'li', /* istanbul ignore next */{ key: i }, c.name));}))));
   
   
   
@@ -55,14 +55,14 @@ exports[`test should respond to store updates 1`] = `
       <li />
       <li />
     </ul>
-  </function ListOfCustomers( /* istanbul ignore next */_ref2) {/* istanbul ignore next */var customers = _ref2.customers; /* istanbul ignore next */++__cov_lvVWst_SZwengrEOh37UL$X$OXw.f['6'];++__cov_lvVWst_SZwengrEOh37UL$X$OXw.s['13'];
+  </function ListOfCustomers( /* istanbul ignore next */_ref) {/* istanbul ignore next */var customers = _ref.customers;
     return (
       /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null,
         /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null, /* istanbul ignore next */'Here is your list of customers!'),
   
   
         /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'ul', /* istanbul ignore next */null,
-          customers.map(function (c, i) {/* istanbul ignore next */++__cov_lvVWst_SZwengrEOh37UL$X$OXw.f['7'];++__cov_lvVWst_SZwengrEOh37UL$X$OXw.s['14'];return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'li', /* istanbul ignore next */{ key: i }, c.name));}))));
+          customers.map(function (c, i) /* istanbul ignore next */{return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'li', /* istanbul ignore next */{ key: i }, c.name));}))));
   
   
   
