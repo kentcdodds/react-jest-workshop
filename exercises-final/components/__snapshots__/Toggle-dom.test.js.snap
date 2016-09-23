@@ -1,7 +1,10 @@
 exports[`test changes the class to toggle--on when clicked 1`] = `
 <Toggle
   onToggle={[Function onToggle]}>
-  <button
-    onClick={[Function anonymous]} />
+  <div
+    className="toggle toggle--on">
+    <button
+      onClick={[Function anonymous]} />
+  </div>
 </Toggle>
 `;

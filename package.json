@@ -8,7 +8,7 @@
     "lint": "eslint .",
     "test": "jest --coverage exercises/",
     "test:final": "jest --coverage exercises-final/",
-    "watch:test": "npm run test -- --watch",
+    "watch:test": "jest --watch exercises/",
     "generate": "split-guide generate",
     "validate": "npm run generate && npm run lint && npm run test:final",
     "setup": "npm install && npm run validate"
@@ -25,8 +25,8 @@
   },
   "homepage": "https://github.com/kentcdodds/react-jest-workshop#readme",
   "dependencies": {
-    "react": "15.3.1",
-    "react-dom": "15.3.1"
+    "react": "15.3.2",
+    "react-dom": "15.3.2"
   },
   "devDependencies": {
     "babel-jest": "15.0.0",
@@ -35,16 +35,16 @@
     "babel-preset-react": "6.11.1",
     "babel-preset-stage-2": "6.13.0",
     "enzyme": "2.4.1",
-    "enzyme-to-json": "1.0.3",
+    "enzyme-to-json": "1.1.0",
     "eslint": "3.5.0",
     "eslint-config-kentcdodds": "10.1.0",
-    "glob": "7.0.6",
+    "glob": "7.1.0",
     "jest": "15.1.1",
     "mkdirp": "0.5.1",
     "react-stub-context": "0.7.0",
-    "react-test-renderer": "15.3.1",
+    "react-test-renderer": "15.3.2",
     "rimraf": "2.5.4",
-    "split-guide": "1.0.0"
+    "split-guide": "1.1.0"
   },
   "jest": {
     "cacheDirectory": "./node_modules/.cache",
