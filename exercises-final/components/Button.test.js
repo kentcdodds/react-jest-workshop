@@ -1,10 +1,11 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
-import stubContext from 'react-stub-context'
+import {mount} from 'enzyme'
+import {mountToJson} from 'enzyme-to-json'
 import Button from './Button'
 
 test('styles the button with a background of the context color', () => {
-  const ButtonWithContext = stubContext(Button, {color: 'blue'})
-  const component = renderer.create(<ButtonWithContext>Click Me</ButtonWithContext>)
-  expect(component).toMatchSnapshot()
+  const wrapper = mount(<Button>Click Me</Button>, {
+    context: {color: 'blue'}
+  })
+  expect(mountToJson(wrapper)).toMatchSnapshot()
 })

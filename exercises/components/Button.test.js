@@ -1,4 +1,5 @@
-// You're going to need react, react-test-renderer, react-stub-context, and ./Button
+// You're going to need react, mount from enzyme,
+// mountToJson from enzyme-to-json, and ./Button
 
 test('styles the button with a background of the context color', () => {
   // get a new version of the Button component by using stubContext to stub it with the color blue

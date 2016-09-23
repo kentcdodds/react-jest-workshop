@@ -41,7 +41,6 @@
     "glob": "7.1.0",
     "jest": "15.1.1",
     "mkdirp": "0.5.1",
-    "react-stub-context": "0.7.0",
     "react-test-renderer": "15.3.2",
     "rimraf": "2.5.4",
     "split-guide": "1.1.0"
