@@ -20,6 +20,13 @@ test('should respond to store updates', () => {
   expect(mountToJson(wrapper)).toMatchSnapshot()
 })
 
+test('unsubscribe when unmounted', () => {
+  const {unsubscribe, store} = getStoreStub()
+  const wrapper = mount(<CustomerList store={store} />)
+  wrapper.unmount()
+  expect(unsubscribe).toHaveBeenCalledTimes(1)
+})
+
 /**
  * Render the <CustomerList /> and snapshot it
  * @param {Object} props - the props to render with

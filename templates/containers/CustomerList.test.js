@@ -54,6 +54,22 @@ test('should respond to store updates', () => {
   // WORKSHOP_END
 })
 
+test('unsubscribe when unmounted', () => {
+  // FINAL_START
+  const {unsubscribe, store} = getStoreStub()
+  const wrapper = mount(<CustomerList store={store} />)
+  wrapper.unmount()
+  expect(unsubscribe).toHaveBeenCalledTimes(1)
+  // FINAL_END
+  // WORKSHOP_START
+  // we want to make sure that the unsubscribe function is called on the store
+  // so get the store stub and the unsubscribe mock function from '../store/Customers.stub'
+  // Then use enzyme's `mount` function to mount `./CustomerList` with the store stub.
+  // Take the resulting wrapper from that `mount` and unmount it by calling `wrapper.unmount`
+  // Then assert that the `unsubscribe` mock was called once with toHaveBeenCalledTimes(1)
+  // WORKSHOP_END
+})
+
 // FINAL_START
 /**
  * Render the <CustomerList /> and snapshot it
