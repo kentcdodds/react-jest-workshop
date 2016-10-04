@@ -39,11 +39,19 @@ exports[`test should respond to store updates 1`] = `
         }
       ]
     }>
-    <div />
-    <ul>
-      <li />
-      <li />
-    </ul>
+    <div>
+      <div>
+        Here is your list of customers!
+      </div>
+      <ul>
+        <li>
+          Jill
+        </li>
+        <li>
+          Fred
+        </li>
+      </ul>
+    </div>
   </ListOfCustomers>
 </CustomerList>
 `;
