@@ -28,18 +28,7 @@ exports[`test should respond to store updates 1`] = `
       "subscribe": [Function subscribe]
     }
   }>
-  <function ListOfCustomers( /* istanbul ignore next */_ref) {/* istanbul ignore next */var customers = _ref.customers;
-    return (
-      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null,
-        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null, /* istanbul ignore next */'Here is your list of customers!'),
-  
-  
-        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'ul', /* istanbul ignore next */null,
-          customers.map(function (c, i) /* istanbul ignore next */{return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'li', /* istanbul ignore next */{ key: i }, c.name));}))));
-  
-  
-  
-  }
+  <ListOfCustomers
     customers={
       Array [
         Object {
@@ -50,22 +39,19 @@ exports[`test should respond to store updates 1`] = `
         }
       ]
     }>
-    <div />
-    <ul>
-      <li />
-      <li />
-    </ul>
-  </function ListOfCustomers( /* istanbul ignore next */_ref) {/* istanbul ignore next */var customers = _ref.customers;
-    return (
-      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null,
-        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null, /* istanbul ignore next */'Here is your list of customers!'),
-  
-  
-        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'ul', /* istanbul ignore next */null,
-          customers.map(function (c, i) /* istanbul ignore next */{return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'li', /* istanbul ignore next */{ key: i }, c.name));}))));
-  
-  
-  
-  }>
+    <div>
+      <div>
+        Here is your list of customers!
+      </div>
+      <ul>
+        <li>
+          Jill
+        </li>
+        <li>
+          Fred
+        </li>
+      </ul>
+    </div>
+  </ListOfCustomers>
 </CustomerList>
 `;
