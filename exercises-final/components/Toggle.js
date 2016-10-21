@@ -1,8 +1,8 @@
 import React, {PropTypes, Component} from 'react'
 
 class Toggle extends Component {
-  constructor(props) {
-    super(props)
+  constructor(props, ...rest) {
+    super(props, ...rest)
     this.state = {
       toggledOn: props.initialToggledOn || false,
     }
@@ -12,7 +12,7 @@ class Toggle extends Component {
     const toggledOn = !this.state.toggledOn
     this.props.onToggle(toggledOn)
     this.setState({toggledOn})
-  };
+  }
 
   render() {
     const {children} = this.props
