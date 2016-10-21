@@ -18,7 +18,7 @@ class CustomerList extends Component {
   updateStateWithCustomers = () => {
     const customers = this.props.store.getCustomers()
     this.setState({customers})
-  };
+  }
 
   render() {
     const {customers} = this.state

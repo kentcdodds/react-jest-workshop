@@ -36,7 +36,7 @@ class CustomerList extends Component {
     const customers = store.getCustomers()
     // WORKSHOP_END
     this.setState({customers})
-  };
+  }
 
   render() {
     const {customers} = this.state
