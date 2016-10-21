@@ -49,7 +49,7 @@ test('invokes the onToggle prop when clicked', () => {
 
 // COMMENT_START
 // this one isn't working for some reason... Anyone wanna give it a look?
-xit('changes the class to toggle--on when clicked', () => {
+test('changes the class to toggle--on when clicked', () => {
   // FINAL_START
   const wrapper = mountToggle()
   clickButton(wrapper)

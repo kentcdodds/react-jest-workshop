@@ -3,8 +3,10 @@ exports[`test styles the button with a background of the context color 1`] = `
   <button
     style={
       Object {
-        "background": "blue"
+        "background": "blue",
       }
-    } />
+    }>
+    Click Me
+  </button>
 </Button>
 `;

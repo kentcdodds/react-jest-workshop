@@ -1,6 +1,7 @@
 // FINAL_START
 import React from 'react'
-import renderer from 'react-test-renderer'
+import {render, mount} from 'enzyme'
+import {renderToJson, mountToJson} from 'enzyme-to-json'
 import getStoreStub from '../store/Customers.stub'
 import CustomerList from './CustomerList'
 // FINAL_END
@@ -40,10 +41,10 @@ test('should render customers', () => {
 test('should respond to store updates', () => {
   // FINAL_START
   const {store, updateCustomers} = getStoreStub()
-  const component = renderCustomerList({store})
-  expect(component).toMatchSnapshot()
+  const wrapper = mountCustomerList({store})
+  expect(mountToJson(wrapper)).toMatchSnapshot()
   updateCustomers([{name: 'Jill'}, {name: 'Fred'}])
-  expect(component).toMatchSnapshot()
+  expect(mountToJson(wrapper)).toMatchSnapshot()
   // FINAL_END
   // WORKSHOP_START
   // get both the store and the updateCustomers from a call to `../store/Customers.stub`
@@ -54,14 +55,30 @@ test('should respond to store updates', () => {
   // WORKSHOP_END
 })
 
+test('unsubscribe when unmounted', () => {
+  // FINAL_START
+  const {unsubscribe, store} = getStoreStub()
+  const wrapper = mountCustomerList({store})
+  wrapper.unmount()
+  expect(unsubscribe).toHaveBeenCalledTimes(1)
+  // FINAL_END
+  // WORKSHOP_START
+  // we want to make sure that the unsubscribe function is called on the store
+  // so get the store stub and the unsubscribe mock function from '../store/Customers.stub'
+  // Then use enzyme's `mount` function to mount `./CustomerList` with the store stub.
+  // Take the resulting wrapper from that `mount` and unmount it by calling `wrapper.unmount`
+  // Then assert that the `unsubscribe` mock was called once with toHaveBeenCalledTimes(1)
+  // WORKSHOP_END
+})
+
 // FINAL_START
 /**
  * Render the <CustomerList /> and snapshot it
  * @param {Object} props - the props to render with
  */
 function snapshotCustomerList(props = {}) {
-  const component = renderCustomerList(props)
-  expect(component).toMatchSnapshot()
+  const wrapper = renderCustomerList(props)
+  expect(renderToJson(wrapper)).toMatchSnapshot()
 }
 
 /**
@@ -70,12 +87,27 @@ function snapshotCustomerList(props = {}) {
  * @return {Object} the rendered component
  */
 function renderCustomerList({store = getStoreStub().store}) {
-  return renderer.create(<CustomerList store={store} />)
+  return render(<CustomerList store={store} />)
+}
+
+/**
+ * Mounts <CustomerList /> with the given props
+ * @param {Object} props - the props to mount with
+ * @return {Object} the rendered component
+ */
+function mountCustomerList({store = getStoreStub().store}) {
+  return mount(<CustomerList store={store} />)
 }
 // FINAL_END
 // WORKSHOP_START
 // Create a snapshotCustomerList function that:
-// 1. Accepts props
-// 2. Creates a component with those props with a call to renderer.create (tip: you may wanna do this in a separate function)
-// 3. Asserts on a snapshot of that component with expect(component).toMatchSnapshot()
+//   1. Accepts props
+//   2. Creates a component with those props with a call to renderer.create (tip: you may wanna do this in a separate function)
+//   3. Asserts on a snapshot of that component with expect(component).toMatchSnapshot()
+// Create a renderCustomerList function that:
+//   1. Accepts props and defaults the store to the store stub
+//   2. Returns a render the CustomerList with those propse
+// Create a mountCustomerList function that:
+//   1. Accepts props and defaults the store to the store stub
+//   2. Returns a mount the CustomerList with those propse
 // WORKSHOP_END

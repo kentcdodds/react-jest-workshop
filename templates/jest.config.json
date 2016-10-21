@@ -1,0 +1,18 @@
+{
+  "testPathDirs": [
+    // WORKSHOP_START
+    "exercises"
+    // WORKSHOP_END
+    // FINAL_START
+    "exercises-final"
+    // FINAL_END
+  ],
+  "coverageThreshold": {
+    "global": {
+      "branches": 100,
+      "functions": 95,
+      "lines": 100,
+      "statements": 100
+    }
+  }
+}

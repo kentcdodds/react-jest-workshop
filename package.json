@@ -6,12 +6,12 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "jest --coverage exercises/",
-    "test:final": "jest --coverage exercises-final/",
-    "watch:test": "jest --watch exercises/",
+    "test": "jest --coverage --config=exercises/jest.config.json",
+    "test:final": "jest --coverage --config=exercises-final/jest.config.json",
+    "watch:test": "jest --watch --config=exercises/jest.config.json",
     "generate": "split-guide generate",
-    "validate": "npm run generate && npm run lint && npm run test:final",
-    "setup": "npm install && npm run validate"
+    "validate": "npm run generate -s && npm run lint -s && npm run test:final -s",
+    "setup": "npm install && npm run validate -s"
   },
   "repository": {
     "type": "git",
@@ -29,31 +29,20 @@
     "react-dom": "15.3.2"
   },
   "devDependencies": {
-    "babel-jest": "15.0.0",
-    "babel-polyfill": "6.13.0",
-    "babel-preset-es2015": "6.14.0",
-    "babel-preset-react": "6.11.1",
-    "babel-preset-stage-2": "6.13.0",
-    "enzyme": "2.4.1",
-    "enzyme-to-json": "1.1.0",
-    "eslint": "3.5.0",
+    "babel-jest": "16.0.0",
+    "babel-polyfill": "6.16.0",
+    "babel-preset-es2015": "6.16.0",
+    "babel-preset-react": "6.16.0",
+    "babel-preset-stage-2": "6.17.0",
+    "enzyme": "2.5.1",
+    "enzyme-to-json": "1.1.4",
+    "eslint": "3.8.1",
     "eslint-config-kentcdodds": "10.1.0",
-    "glob": "7.1.0",
-    "jest": "15.1.1",
+    "glob": "7.1.1",
+    "jest": "16.0.2",
     "mkdirp": "0.5.1",
-    "react-test-renderer": "15.3.2",
+    "react-addons-test-utils": "^15.3.2",
     "rimraf": "2.5.4",
     "split-guide": "1.1.0"
-  },
-  "jest": {
-    "cacheDirectory": "./node_modules/.cache",
-    "coverageThreshold": {
-      "global": {
-        "branches": 100,
-        "functions": 95,
-        "lines": 100,
-        "statements": 100
-      }
-    }
   }
 }
