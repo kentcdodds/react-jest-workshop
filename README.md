@@ -53,7 +53,7 @@ MIT
 [React]: https://facebook.github.io/react/
 [Jest]: http://facebook.github.io/jest/
 [Enzyme]: http://airbnb.io/enzyme/
-[slides]: http://kcd.im/testing-react
+[slides]: http://kcd.im/react-jest
 [slides-badge]: https://cdn.rawgit.com/kentcdodds/custom-badges/2/badges/slides.svg
 [donate]: http://kcd.im/donate
 [prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
