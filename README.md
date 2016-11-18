@@ -34,15 +34,14 @@ good to go. Otherwise, please [file an issue](https://help.github.com/articles/c
 
 There are two directories in this project that you should be interested in:
 
-- `app`: Where the unfinished tests are (where you should add your tests).
-- `app-final`: Where the finished tests are (where you can reference if you get stuck).
+- `exercises`: Where the unfinished tests are (where you should add your tests).
+- `exercises-final`: Where the finished tests are (where you can reference if you get stuck).
 
-The tests in `app` are actually all scaffolded for you. So your goal is to go through and write all the tests. Do this:
+The tests in `exercises` are actually all scaffolded for you. So your goal is to go through and write all the tests. Do this:
 
 1. Run `npm run watch:test` which will start running the tests in watch mode, meaning that as you save your file, it
 will automatically re-run your tests so you can quickly see how you're doing.
-2. Choose a file in the `app` directory that ends in `.test.js` and implement the tests by changing
-`xit(` to `test(` one-by-one.
+2. Choose a file in the `app` directory that ends in `.test.js` and implement the tests one-by-one.
 
 Good luck!
 
