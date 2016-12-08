@@ -11,24 +11,21 @@ This is a workshop for learning how to test [React][React] with the [Jest][Jest]
 
 ## Project Setup
 
-This project assumes you have [NodeJS v6](http://nodejs.org/) or greater installed. You should
-also have [npm v3](https://www.npmjs.com/) or greater installed as well (this comes packaged
-with Node 6). You'll also need a recent version of [git](https://git-scm.com/) installed
-as well.
+This project assumes you have [NodeJS v6](http://nodejs.org/) or greater installed. It's also recommended to use the
+[`yarn`](https://yarnpkg.com/) client (rather than [npm](https://www.npmjs.com/)). If you'd rather stick with `npm`,
+that's fine. Just replace `yarn` with `npm` in the instructions below and hope that things don't break 😏.
+You'll also need a recent version of [git](https://git-scm.com/) installed as well.
 
-You may have come to this project from different varying sources. There are a
-different series of branches for each workshop/course I've done. To get started with
-the project, start with this:
+With that, run:
 
-1. [Sign up](https://github.com/join) for a GitHub Account (if you don't already have one)
-2. [Clone](https://help.github.com/articles/cloning-a-repository/) this repository
-3. In the directory you cloned the repository, run `npm run setup`
+```
+git clone https://github.com/kentcdodds/react-jest-workshop.git
+cd react-jest-workshop
+yarn run setup
+```
 
-If you need help with these steps, you might check out
-[this free Egghead.io course](http://kcd.im/pull-request) which can help you get things going.
-
-If the `npm run setup` script finishes without errors (don't worry about warnings) then you're
-good to go. Otherwise, please [file an issue](https://help.github.com/articles/creating-an-issue/).
+If the `yarn run setup` script finishes without errors (don't worry about warnings) then you're good to go. Otherwise,
+please [file an issue](https://help.github.com/articles/creating-an-issue/).
 
 ## Testing Instructions
 
@@ -39,9 +36,9 @@ There are two directories in this project that you should be interested in:
 
 The tests in `exercises` are actually all scaffolded for you. So your goal is to go through and write all the tests. Do this:
 
-1. Run `npm run watch:test` which will start running the tests in watch mode, meaning that as you save your file, it
+1. Run `yarn run watch:test` which will start running the tests in watch mode, meaning that as you save your file, it
 will automatically re-run your tests so you can quickly see how you're doing.
-2. Choose a file in the `app` directory that ends in `.test.js` and implement the tests one-by-one.
+2. Choose a file in the `exercises` directory that ends in `.test.js` and implement the tests one-by-one.
 
 Good luck!
 
