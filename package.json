@@ -11,7 +11,7 @@
     "watch:test": "jest --watch --config=exercises/jest.config.json",
     "generate": "split-guide generate",
     "validate": "npm run generate -s && npm run lint -s && npm run test:final -s",
-    "setup": "npm install && npm run validate -s"
+    "setup": "node ./scripts/verify && node ./scripts/install && npm run validate"
   },
   "repository": {
     "type": "git",
@@ -25,21 +25,21 @@
   },
   "homepage": "https://github.com/kentcdodds/react-jest-workshop#readme",
   "dependencies": {
-    "react": "15.3.2",
-    "react-dom": "15.3.2"
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
   },
   "devDependencies": {
-    "babel-jest": "16.0.0",
+    "babel-jest": "^17.0.2",
     "babel-polyfill": "6.16.0",
-    "babel-preset-es2015": "6.16.0",
+    "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "6.16.0",
-    "babel-preset-stage-2": "6.17.0",
-    "enzyme": "2.5.1",
-    "enzyme-to-json": "1.1.4",
-    "eslint": "3.8.1",
-    "eslint-config-kentcdodds": "10.1.0",
+    "babel-preset-stage-2": "^6.18.0",
+    "enzyme": "^2.6.0",
+    "enzyme-to-json": "^1.4.4",
+    "eslint": "^3.11.1",
+    "eslint-config-kentcdodds": "^11.1.0",
     "glob": "7.1.1",
-    "jest": "16.0.2",
+    "jest": "^17.0.3",
     "mkdirp": "0.5.1",
     "react-addons-test-utils": "^15.3.2",
     "rimraf": "2.5.4",

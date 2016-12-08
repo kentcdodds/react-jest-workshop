@@ -1,2 +1,5 @@
 coverage/
 
+# these scripts have to work on older versions of node
+scripts/install.js
+scripts/verify.js
