@@ -1,11 +1,7 @@
 {
   "testPathDirs": [
-    // WORKSHOP_START
-    "exercises"
-    // WORKSHOP_END
-    // FINAL_START
+    "exercises",
     "exercises-final"
-    // FINAL_END
   ],
   "coverageThreshold": {
     "global": {
