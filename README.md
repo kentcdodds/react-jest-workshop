@@ -4,6 +4,8 @@
 [![PRs Welcome][prs-badge]][prs]
 [![Donate][donate-badge]][donate]
 
+<a href="https://app.codesponsor.io/link/PKGFLnhDiFvsUA5P4kAXfiPs/kentcdodds/react-jest-workshop" rel="nofollow"><img src="https://app.codesponsor.io/embed/PKGFLnhDiFvsUA5P4kAXfiPs/kentcdodds/react-jest-workshop.svg" style="width: 888px; height: 68px;" alt="Sponsor" /></a>
+
 Find slides [here](http://kcd.im/testing-react)
 
 This is a workshop for learning how to test [React][React] with the [Jest][Jest] testing framework and the
