@@ -28,7 +28,7 @@ best friend:
 
 Unfortunately I haven't had time to finish this (as I did with the AVA counterpart)
 
-On the plus side, Jest is pretty easy to get set up! And I have a few (free) videos
+On the plus side, Jest is pretty easy to get set up! And I have a few videos
 on [egghead.io](https://egghead.io/) [here](http://kcd.im/egghead-jest) to help you
 get going.
 
